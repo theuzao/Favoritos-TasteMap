@@ -4,7 +4,7 @@
 				"nome": "Pizzaria Delícia",
 				"descricao": "Melhor pizza da cidade!",
 				"localizacao": "Rua das Flores, 123",
-				"imagem": "./pizza.jpg",
+				"imagem": "./imagens/pizza.jpg",
 				"horario": "Seg-Dom: 18h - 23h"
 		},
 		{
@@ -12,7 +12,7 @@
 				"nome": "Churrascaria Fogo Forte",
 				"descricao": "Churrasco no ponto certo!",
 				"localizacao": "Avenida Brasil, 456",
-				"imagem": "./churrasco.jpg",
+				"imagem": "./imagens/churrasco.jpg",
 				"horario": "Seg-Sáb: 12h - 22h"
 		},
 		{
@@ -20,7 +20,7 @@
 				"nome": "Sushi da Hora",
 				"descricao": "Sushi fresco e saboroso.",
 				"localizacao": "Praça da Liberdade, 789",
-				"imagem": "./sushi.jpg",
+				"imagem": "./imagens/sushi.jpg",
 				"horario": "Ter-Dom: 17h - 23h"
 		},
 		{
@@ -28,7 +28,7 @@
 				"nome": "Hamburgueria Top",
 				"descricao": "Hambúrgueres artesanais.",
 				"localizacao": "Rua das Palmeiras, 101",
-				"imagem": "./hamburguer.jpg",
+				"imagem": "./imagens/hamburguer.jpg",
 				"horario": "Todos os dias: 11h - 23h"
 		}
 ]
