@@ -1,34 +1,106 @@
 [
-		{
-				"id": 1,
-				"nome": "Pizzaria Delícia",
-				"descricao": "Melhor pizza da cidade!",
-				"localizacao": "Rua das Flores, 123",
-				"imagem": "./imagens/pizza.jpg",
-				"horario": "Seg-Dom: 18h - 23h"
-		},
-		{
-				"id": 2,
-				"nome": "Churrascaria Fogo Forte",
-				"descricao": "Churrasco no ponto certo!",
-				"localizacao": "Avenida Brasil, 456",
-				"imagem": "./imagens/churrasco.jpg",
-				"horario": "Seg-Sáb: 12h - 22h"
-		},
-		{
-				"id": 3,
-				"nome": "Sushi da Hora",
-				"descricao": "Sushi fresco e saboroso.",
-				"localizacao": "Praça da Liberdade, 789",
-				"imagem": "./imagens/sushi.jpg",
-				"horario": "Ter-Dom: 17h - 23h"
-		},
-		{
-				"id": 4,
-				"nome": "Hamburgueria Top",
-				"descricao": "Hambúrgueres artesanais.",
-				"localizacao": "Rua das Palmeiras, 101",
-				"imagem": "./imagens/hamburguer.jpg",
-				"horario": "Todos os dias: 11h - 23h"
-		}
+    {
+        "id": 1,
+        "nome_restaurante": "Pizzaria Delícia",
+        "avaliacao": 4.7,
+        "numero_avaliacoes": 150,
+        "localizacao": {
+            "endereco": "Rua das Flores, 123",
+            "cidade": "Belo Horizonte",
+            "estado": "MG"
+        },
+        "tipo_culinaria": "Italiana",
+        "horario_funcionamento": {
+            "abertura": "18:00",
+            "fechamento": "23:00",
+            "dias": ["Segunda-feira", "Domingo"]
+        },
+        "contato": {
+            "telefone": "(31) 1234-5678"
+        },
+        "acoes_rapidas": {
+            "favoritar": true,
+            "link_reserva": "https://reservas.pizzariadelicia.com",
+            "link_menu": "https://pizzariadelicia.com/menu"
+        },
+        "imagem": "./imagens/pizza.jpg"
+    },
+    {
+        "id": 2,
+        "nome_restaurante": "Churrascaria Fogo Forte",
+        "avaliacao": 4.8,
+        "numero_avaliacoes": 320,
+        "localizacao": {
+            "endereco": "Avenida Brasil, 456",
+            "cidade": "Belo Horizonte",
+            "estado": "MG"
+        },
+        "tipo_culinaria": "Churrasco",
+        "horario_funcionamento": {
+            "abertura": "12:00",
+            "fechamento": "22:00",
+            "dias": ["Segunda-feira", "Sábado"]
+        },
+        "contato": {
+            "telefone": "(31) 8765-4321"
+        },
+        "acoes_rapidas": {
+            "favoritar": true,
+            "link_reserva": "https://reservas.churrascariafogoforte.com",
+            "link_menu": "https://churrascariafogoforte.com/menu"
+        },
+        "imagem": "./imagens/churrasco.jpg"
+    },
+    {
+        "id": 3,
+        "nome_restaurante": "Sushi da Hora",
+        "avaliacao": 4.6,
+        "numero_avaliacoes": 210,
+        "localizacao": {
+            "endereco": "Praça da Liberdade, 789",
+            "cidade": "Belo Horizonte",
+            "estado": "MG"
+        },
+        "tipo_culinaria": "Japonesa",
+        "horario_funcionamento": {
+            "abertura": "17:00",
+            "fechamento": "23:00",
+            "dias": ["Terça-feira", "Domingo"]
+        },
+        "contato": {
+            "telefone": "(31) 9876-5432"
+        },
+        "acoes_rapidas": {
+            "favoritar": true,
+            "link_reserva": "https://reservas.sushidahora.com",
+            "link_menu": "https://sushidahora.com/menu"
+        },
+        "imagem": "./imagens/sushi.jpg"
+    },
+    {
+        "id": 4,
+        "nome_restaurante": "Hamburgueria Top",
+        "avaliacao": 4.5,
+        "numero_avaliacoes": 180,
+        "localizacao": {
+            "endereco": "Rua das Palmeiras, 101",
+            "cidade": "Belo Horizonte",
+            "estado": "MG"
+        },
+        "tipo_culinaria": "Americana",
+        "horario_funcionamento": {
+            "abertura": "11:00",
+            "fechamento": "23:00",
+            "dias": ["Todos os dias"]
+        },
+        "contato": {
+            "telefone": "(31) 6789-1234"
+        },
+        "acoes_rapidas": {
+            "favoritar": true,
+            "link_reserva": "https://reservas.hamburgueriatop.com",
+            "link_menu": "https://hamburgueriatop.com/menu"
+        },
+        "imagem": "./imagens/hamburguer.jpg"
+    }
 ]
