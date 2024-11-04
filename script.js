@@ -23,13 +23,19 @@ function criarCarrossel() {
 
         slide.innerHTML = `
             <div class="restaurant-card">
-                <img src="${restaurante.imagem}" alt="${restaurante.nome}">
-                <h3>${restaurante.nome}</h3>
-                <p>${restaurante.descricao}</p>
+                <img src="${restaurante.imagem}" alt="${restaurante.nome_restaurante}">
+                <h3>${restaurante.nome_restaurante}</h3>
+                <p>${restaurante.tipo_culinaria}</p>
+                <p><strong>Localização:</strong> ${restaurante.localizacao.endereco}</p>
+                <p><strong>Avaliação:</strong> ${restaurante.avaliacao} ⭐ (${restaurante.numero_avaliacoes} avaliações)</p>
+                <p><strong>Horário:</strong> ${restaurante.horario_funcionamento.dias.join(', ')} - ${restaurante.horario_funcionamento.abertura} às ${restaurante.horario_funcionamento.fechamento}</p>
+                <p><strong>Contato:</strong> ${restaurante.contato.telefone}</p>
                 <button onclick="adicionarFavorito(${restaurante.id})" class="btn btn-primary">Favoritar</button>
+                <a href="${restaurante.acoes_rapidas.link_menu}" class="btn btn-secondary" target="_blank">Ver Menu</a>
+                <a href="${restaurante.acoes_rapidas.link_reserva}" class="btn btn-secondary" target="_blank">Reservar</a>
             </div>
         `;
-        carrossel.appendChild(slide);  // Adiciona o slide no carrossel
+        carrossel.appendChild(slide);
     });
 }
 
@@ -39,15 +45,15 @@ function adicionarFavorito(id) {
     if (!favoritos.some(r => r.id === id)) {  
         favoritos.push(restaurante);
         renderizarFavoritos();  
-        alert(`${restaurante.nome} foi adicionado aos favoritos!`);
+        alert(`${restaurante.nome_restaurante} foi adicionado aos favoritos!`);
     } else {
-        alert(`${restaurante.nome} já está nos favoritos!`);
+        alert(`${restaurante.nome_restaurante} já está nos favoritos!`);
     }
 }
 
 // Remove um restaurante dos favoritos
 function removerFavorito(id) {
-    favoritos = favoritos.filter(r => r.id !== id);  // Filtra a lista para remover o restaurante
+    favoritos = favoritos.filter(r => r.id !== id); 
     renderizarFavoritos();  
     alert("Restaurante removido dos favoritos.");
 }
@@ -64,24 +70,20 @@ function renderizarFavoritos() {
         div.classList.add('col-md-6', 'favorite-card');
 
         div.innerHTML = `
-            <img src="${restaurante.imagem}" alt="${restaurante.nome}">
+            <img src="${restaurante.imagem}" alt="${restaurante.nome_restaurante}">
             <div class="info">
-                <h5>${restaurante.nome}</h5>
-                <p>${restaurante.localizacao}</p>
-                <p><strong>Horário:</strong> ${restaurante.horario}</p>
+                <h5>${restaurante.nome_restaurante}</h5>
+                <p>${restaurante.tipo_culinaria}</p>
+                <p><strong>Localização:</strong> ${restaurante.localizacao.endereco}</p>
+                <p><strong>Horário:</strong> ${restaurante.horario_funcionamento.dias.join(', ')} - ${restaurante.horario_funcionamento.abertura} às ${restaurante.horario_funcionamento.fechamento}</p>
+                <p><strong>Contato:</strong> ${restaurante.contato.telefone}</p>
+                <a href="${restaurante.acoes_rapidas.link_menu}" class="btn btn-secondary" target="_blank">Ver Menu</a>
+                <a href="${restaurante.acoes_rapidas.link_reserva}" class="btn btn-secondary" target="_blank">Reservar</a>
+                <button onclick="removerFavorito(${restaurante.id})" class="btn btn-danger">Remover</button>
             </div>
-            <button onclick="removerFavorito(${restaurante.id})" class="btn btn-danger">Remover</button>
         `;
-        listaFavoritos.appendChild(div);  // Adiciona o restaurante à lista
+        listaFavoritos.appendChild(div);
     });
-
-    // Para manter o layout alinhado se houver apenas um favorito
-    if (favoritos.length === 1) {
-        const placeholder = document.createElement('div');
-        placeholder.style.flex = '1 1 calc(50% - 15px)';
-        placeholder.style.visibility = 'hidden';
-        listaFavoritos.appendChild(placeholder);
-    }
 }
 
 // Inicia a busca de restaurantes ao carregar a página
