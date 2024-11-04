@@ -28,7 +28,7 @@ function criarCarrossel() {
                 <p>${restaurante.tipo_culinaria}</p>
                 <p><strong>Localização:</strong> ${restaurante.localizacao.endereco}</p>
                 <p><strong>Avaliação:</strong> ${restaurante.avaliacao} ⭐ (${restaurante.numero_avaliacoes} avaliações)</p>
-                <p><strong>Horário:</strong> ${restaurante.horario_funcionamento.dias.join('à ')} - ${restaurante.horario_funcionamento.abertura} às ${restaurante.horario_funcionamento.fechamento}</p>
+                <p><strong>Horário:</strong> ${restaurante.horario_funcionamento.dias.join(' à ')} - ${restaurante.horario_funcionamento.abertura} às ${restaurante.horario_funcionamento.fechamento}</p>
                 <p><strong>Contato:</strong> ${restaurante.contato.telefone}</p>
                 <button onclick="adicionarFavorito(${restaurante.id})" class="btn btn-primary">Favoritar</button>
                 <a href="${restaurante.acoes_rapidas.link_menu}" class="btn btn-secondary" target="_blank">Ver Menu</a>
@@ -75,7 +75,7 @@ function renderizarFavoritos() {
                 <h5>${restaurante.nome_restaurante}</h5>
                 <p>${restaurante.tipo_culinaria}</p>
                 <p><strong>Localização:</strong> ${restaurante.localizacao.endereco}</p>
-                <p><strong>Horário:</strong> ${restaurante.horario_funcionamento.dias.join('à ')} - ${restaurante.horario_funcionamento.abertura} às ${restaurante.horario_funcionamento.fechamento}</p>
+                <p><strong>Horário:</strong> ${restaurante.horario_funcionamento.dias.join(' à ')} - ${restaurante.horario_funcionamento.abertura} às ${restaurante.horario_funcionamento.fechamento}</p>
                 <p><strong>Contato:</strong> ${restaurante.contato.telefone}</p>
                 <a href="${restaurante.acoes_rapidas.link_menu}" class="btn btn-secondary" target="_blank">Ver Menu</a>
                 <a href="${restaurante.acoes_rapidas.link_reserva}" class="btn btn-secondary" target="_blank">Reservar</a>
