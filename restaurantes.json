@@ -13,7 +13,7 @@
         "horario_funcionamento": {
             "abertura": "18:00",
             "fechamento": "23:00",
-            "dias": ["Quarta-feira" à "Domingo"]
+            "dias": ["Quarta-feira", à "Domingo"]
         },
         "contato": {
             "telefone": "(31) 1234-5678"
