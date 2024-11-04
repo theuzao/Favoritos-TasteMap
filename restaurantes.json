@@ -13,7 +13,7 @@
         "horario_funcionamento": {
             "abertura": "18:00",
             "fechamento": "23:00",
-            "dias": ["Quarta-feira", "à", "Domingo"]
+            "dias": ["Quarta-feira", "Domingo"]
         },
         "contato": {
             "telefone": "(31) 1234-5678"
@@ -39,7 +39,7 @@
         "horario_funcionamento": {
             "abertura": "12:00",
             "fechamento": "22:00",
-            "dias": ["Segunda-feira" à "Sábado"]
+            "dias": ["Segunda-feira", "Sábado"]
         },
         "contato": {
             "telefone": "(31) 8765-4321"
@@ -65,7 +65,7 @@
         "horario_funcionamento": {
             "abertura": "17:00",
             "fechamento": "23:00",
-            "dias": ["Terça-feira" à "Domingo"]
+            "dias": ["Terça-feira", "Domingo"]
         },
         "contato": {
             "telefone": "(31) 9876-5432"
